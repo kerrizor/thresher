@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require 'thresher'
+
+unless ARGV.length > 0
+  STDERR.puts "Please provide a Twitter account to thresh."
+  exit
+end
+
+cli = Thresher::CommandLineInterface.new(ARGV)
+
+cli.thresh
